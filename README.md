@@ -39,7 +39,7 @@ setwd(<ENTER HERE THE FULL PATH TO THE FOLDER>)
 source("run_analysis.R")
 ```
 
-It will install automatically all mendatory packages (data.table, plyr, dplyr and reshape2) if needed.
+It will install automatically all mendatory packages (dplyr here) if needed.
 
 ## Files created
 
