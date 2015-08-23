@@ -116,7 +116,7 @@ testFullDS <- mutate(testFullDS,source_data="test"
 fullDS_df <- rbind(trainingFullDS,testFullDS)
 rm(trainingFullDS,testFullDS) # cleanup
 ## for debug
-#fullDS <- arrange(fullDS_df,subject,activity,source_data)
+fullDS <- arrange(fullDS_df,subject,activity,source_data)
 
 ######################################
 ## tidy data summarizing by subject and activity
@@ -125,6 +125,7 @@ by_subjectAct <- fullDS_df %>%
                   group_by(subject, activity) %>% #group by keys "subject" and "activity"
                   summarise_each(funs(mean)) %>% #run mean function on all columns but the keys
                   arrange(subject,activity) #sort rows by the keys
+## rename the tidy dataset columns to their new real meaning (not anymore values, but mean)
 colnames(by_subjectAct) <- sub(x = sub(pattern = "^time"
                                     ,replacement = "meanOfTime",x = colnames(by_subjectAct))
                                ,pattern = "^freq",replacement = "meanOfFreq")
