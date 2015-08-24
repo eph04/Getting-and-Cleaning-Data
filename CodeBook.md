@@ -20,7 +20,7 @@ A complement of information on the input files can be found at the following lin
 
 ## Study design and data processing
 
-### Collection of the raw data
+#### Collection of the raw data
 
 The data used as input for this project can be retrieved using the following uri:
 
@@ -86,7 +86,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 - tBodyGyroMean
 - tBodyGyroJerkMean
 
-### Notes on the original (raw) data 
+#### Notes on the original (raw) data 
 
 - Features are normalized and bounded within [-1,1].
 - Each feature vector is a row on the text file.
@@ -94,7 +94,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 ## Creating the tidy datafile
 [See the README file provided for more precise information](./README.md)
 
-### Guide to create the tidy data file
+#### Guide to create the tidy data file
 To create the tidy data set:
 
 1. Create a folder for the project
@@ -105,7 +105,7 @@ To create the tidy data set:
 6. Source the run_analysis.R in R or RStudio console
 7. The tidy.txt data file created inside the project folder contains the tidy data
 
-### Cleaning of the data
+#### Cleaning of the data
 The cleaning process is as follows:
 
 1. Retrieve all features and activities
@@ -117,7 +117,7 @@ The cleaning process is as follows:
 
 ## Description of the variables in the tiny.txt file
 
-### Dimensions of the dataset
+#### Dimensions of the dataset
 As previously mentionned, 66 measurements (**33 signal observed** times 2 variable types *mean* and *std*) needs to be retrieved and summarized using the mean function by **subject (30)** and **activities (6)**. 
 
 Using a **wide format** (each measurement is in a column of the observation row) for the output, it should be of dimension:
@@ -126,7 +126,7 @@ Using a **wide format** (each measurement is in a column of the observation row)
 
 Output dimensions: table of 180 rows and 68 columns
 
-### Attributes
+#### Attributes
 
 The two attributes on which the tidy data set has been aggregated and summarized are the **subject id** (numeric) and the **activity name** (character).
 
@@ -134,7 +134,7 @@ There are 30 subjects for the experiments, numbered from 1 to 30.
 
 There are 6 activities, WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING and LAYING.
 
-### Variables
+#### Variables
 
 All variables are of numeric class (calculated mean of variables) except for the two first which are the attributes of character class.
 
